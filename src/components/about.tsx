@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import PFP from '../assets/pfp.jpg'
 import Icon from './buttons/icons';
 
@@ -12,13 +14,20 @@ import Youtube from '../assets/Links/youtube.svg'
 
 import '../App.css'
 
+const baseGradientStyles = {
+    backgroundImage: "linear-gradient(to right, #ec4899, #8b5cf6, #3b82f6)",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+  };
+
+
 function About() {
 
     
 
 
   return (
-    <div className=' hidden md:flex inset-3 flex-col items-center p-5 lg:w-94 md:w-54 h-screen fixed rounded-tr-3xl rounded-tl-3xl   bg-slate-900'>
+    <div className=' hidden md:flex inset-3 flex-col items-center p-5 lg:w-94 md:w-54 h-screen fixed rounded-tr-3xl rounded-tl-3xl   bg-slate-900 overflow-y-auto'>
         <div>
 
             {/* this is the about me part*/}
@@ -54,12 +63,21 @@ function About() {
             <br></br>
             <br></br>
             <br></br>
-            <p className="whitespace-pre font-mono text-xl font-bold text-blue-300/40 pb-8 select-none text-center">
+            <motion.p className="whitespace-pre font-mono text-xl font-bold text-blue-300/40 pb-8 select-none text-center font-semibold"
+            
+                style={{
+                    ...baseGradientStyles,
+                    color: "oklch(37.2% 0.044 257.287)", 
+                }}
+                whileHover={{ color: "transparent" }} 
+                transition={{ duration: 0.3 }}
+                //className="font-semibold cursor-pointer"
+                >
                  ∧ ,,, ∧  <br></br>
                 (  ̳• · • ̳) <br></br>
                 /    づ♡
 
-            </p>
+            </motion.p>
 
         </div>
         
