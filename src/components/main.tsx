@@ -1,5 +1,4 @@
 import Skill from './buttons/skill'
-import { motion } from "framer-motion";
 import { useState  } from 'react';
 
 import Description from './description';
