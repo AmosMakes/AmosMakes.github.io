@@ -8,7 +8,7 @@ type SkillDisplayProps = {
 
 const Skill: React.FC<SkillDisplayProps> = ({ PortalIcon , IconName , useStateHook}) => {
   return (
-    <motion.button className="flex flex-col items-center m-4 bg-slate-600 w-25 h-25 justify-center items-center rounded-3xl cursor-pointer" onClick={() => useStateHook(IconName)}
+    <motion.button className="flex flex-col items-center m-4    bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500     w-25 h-25 justify-center items-center rounded-3xl cursor-pointer" onClick={() => useStateHook(IconName)}
     initial={{ backgroundColor: "oklch(44.6% 0.043 257.281)" , boxShadow: "none"}}
     whileHover={{scale: 1.2, backgroundColor :"oklch(70.4% 0.04 256.788)",boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"    }}
     transition={{ stiffness: 300 , ease: ["easeIn", "easeOut"],duration : 0.2}}
