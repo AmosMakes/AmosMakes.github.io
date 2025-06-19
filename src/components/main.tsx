@@ -59,7 +59,7 @@ function GetIcon(name : string){
         case "Substance Designer":
             return Designer
         default:
-            return C
+            return ''
     }
 }
 

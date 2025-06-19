@@ -23,6 +23,7 @@ type DescriptionContent = {
     "Blender" : string[],
     "Substance Painter" : string[],
     "Substance Designer" : string[],
+    '' : String[]
 }
 
 
@@ -102,18 +103,19 @@ const content : DescriptionContent = {
     "Blender" : Blender,
     "Substance Painter" : SubstancePainter,
     "Substance Designer" : SubstanceDesigner,
+    '' : ["",""]
 }
 
 const Description: React.FC<DescriptionProps> = ({ PortalIcon , Descname  }) => {
   return (
-    <motion.div className="flex flex-col  items-center bg-slate-600 m-7 rounded-3xl "
+    <motion.div className="flex flex-col  items-center bg-slate-900 p-5 rounded-3xl "
     initial={{ opacity: 0, scale: 0.8 }}   
     animate={{ opacity: 1, scale: 1 }}    
     transition={{ duration: 0.6, ease: "easeOut"}}
     >
-        <img src={PortalIcon} alt="pick something" className="w-40 h-40 object-contain p-5" />
-        <h1 className="font-bold font-mono text-center pt-10 text-xl    slate-900/90">{content[Descname as keyof DescriptionContent ][0]}</h1>
-        <h1 className="font-bold font-mono text-center pt-10 text-xl    slate-900/90">{content[Descname as keyof DescriptionContent][1]}</h1>
+        <img src={PortalIcon} alt="" className="w-40 h-40 object-contain p-5" />
+        <h1 className="font-bold font-mono text-center pt-10 text-xl  bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent  slate-900/90">{content[Descname as keyof DescriptionContent ][0]}</h1>
+        <h1 className="font-bold font-mono text-center pt-10 text-xl  bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent  slate-900/90">{content[Descname as keyof DescriptionContent ][1]}</h1>
     </motion.div>
   );
 };
